@@ -1,0 +1,31 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"> -->
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>Leaflet</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <div style="margin: 10px;">
+      <label for="basemapSelect">Pilih Basemap: </label>
+      <select (change)="changeBasemap()" [(ngModel)]="selectedBasemap">
+        <option *ngFor="let basemap of basemapOptions" [ngValue]="basemap">{{ basemap.name }}</option>
+      </select>
+
+      <!-- <select id="basemapSelect" [(ngModel)]="selectedBasemap" (change)="changeBasemap()">
+        <option *ngFor="let basemap of basemapOptions" [ngValue]="basemap">{{ basemap.name }}</option>
+      </select> -->
+    </div>
+
+    <div id="mapId" style="height: 100%;"></div>
+  <!-- <ion-content id="mapId" style="height: 100%; width: 100%;" [fullscreen]="false"> -->
+  </ion-content>
+
